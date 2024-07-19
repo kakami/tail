@@ -4,13 +4,14 @@
 package watch
 
 import (
-	"fmt"
-	"os"
-	"path/filepath"
+    "fmt"
+    "os"
+    "path/filepath"
 
-	"github.com/hpcloud/tail/util"
+    "github.com/hpcloud/tail/util"
+    "gopkg.in/tomb.v1"
 
-	"github.com/fsnotify/fsnotify"
+    "github.com/fsnotify/fsnotify"
 )
 
 // InotifyFileWatcher uses inotify to monitor file changes.
